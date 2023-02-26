@@ -21,42 +21,22 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.1'
 
-  rails_versions = ['>= 4.1', '< 6.2']
-  spec.add_runtime_dependency 'activemodel', rails_versions
-  # 'activesupport', rails_versions
-  # 'builder'
+  spec.add_runtime_dependency 'activemodel'
+  spec.add_runtime_dependency 'actionpack'
+  spec.add_development_dependency 'activerecord'
+  spec.add_development_dependency 'railties'
+  spec.add_development_dependency 'minitest'
+  spec.add_runtime_dependency 'jsonapi-renderer'
+  spec.add_runtime_dependency 'case_transform'
 
-  spec.add_runtime_dependency 'actionpack', rails_versions
-  # 'activesupport', rails_versions
-  # 'rack'
-  # 'rack-test', '~> 0.6.2'
-
-  spec.add_development_dependency 'railties', rails_versions
-  # 'activesupport', rails_versions
-  # 'actionpack', rails_versions
-  # 'rake', '>= 0.8.7'
-
-  # 'activesupport', rails_versions
-  # 'i18n,
-  # 'tzinfo'
-  spec.add_development_dependency 'minitest', ['~> 5.0', '< 5.11']
-  # 'thread_safe'
-
-  spec.add_runtime_dependency 'jsonapi-renderer', ['>= 0.1.1.beta1', '< 0.3']
-  spec.add_runtime_dependency 'case_transform', '>= 0.2'
-
-  spec.add_development_dependency 'activerecord', rails_versions
-  # arel
-  # activesupport
-  # activemodel
 
   # Soft dependency for pagination
-  spec.add_development_dependency 'kaminari', ' ~> 0.16.3'
-  spec.add_development_dependency 'will_paginate', '~> 3.0', '>= 3.0.7'
+  spec.add_development_dependency 'kaminari'
+  spec.add_development_dependency 'will_paginate'
 
   spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'timecop', '~> 0.7'
-  spec.add_development_dependency 'grape', '>= 0.13'
+  spec.add_development_dependency 'timecop'
+  spec.add_development_dependency 'grape'
   spec.add_development_dependency 'json_schema'
-  spec.add_development_dependency 'rake', '>= 10.0'
+  spec.add_development_dependency 'rake'
 end
